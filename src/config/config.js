@@ -1,23 +1,24 @@
 require('dotenv').config({ path: '../../.env' });
+
 module.exports = {
   development: {
     replication: {
       read: [
         {
-          username: 'root',
-          password: '',
-          database: 'student_hub',
-          host: 'localhost',
+          username: process.env.DB_USERNAME || 'root',
+          password: process.env.DB_PASSWORD || '',
+          database: process.env.DB_NAME || 'student_hub',
+          host: process.env.DB_HOST || 'host.docker.internal', // Default for Docker
         }
       ],
       write: {
-        username: 'root',
-        password: '',
-        database: 'student_hub',
-        host: 'localhost',
+        username: process.env.DB_USERNAME || 'root',
+        password: process.env.DB_PASSWORD || '',
+        database: process.env.DB_NAME || 'student_hub',
+        host: process.env.DB_HOST || 'host.docker.internal', // Default for Docker
       }
     },
-    port: +(process.env.DATABASE_PORT),
+    port: +(process.env.DATABASE_PORT) || 3306,
     dialect: 'mysql',
     logging: false,
     pool: {
