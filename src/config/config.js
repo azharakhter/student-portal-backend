@@ -8,14 +8,14 @@ module.exports = {
           username: process.env.DB_USERNAME || 'root',
           password: process.env.DB_PASSWORD || '',
           database: process.env.DB_NAME || 'student_hub',
-          host: process.env.DB_HOST || 'host.docker.internal', // Default for Docker
+          host: process.env.DB_HOST || 'localhost', // Default for Docker
         }
       ],
       write: {
         username: process.env.DB_USERNAME || 'root',
         password: process.env.DB_PASSWORD || '',
         database: process.env.DB_NAME || 'student_hub',
-        host: process.env.DB_HOST || 'host.docker.internal', // Default for Docker
+        host: process.env.DB_HOST || 'localhost', // Default for Docker
       }
     },
     port: +(process.env.DATABASE_PORT) || 3306,
