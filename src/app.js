@@ -30,7 +30,7 @@ app.use(timeout(120000));
 app.use(haltOnTimedout);
 
 // Express configuration
-app.set('host', '0.0.0.0');
+app.set('host', 'localhost');
 app.set('port', 3000);  // Set to 3000 for AWS EC2 access
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
