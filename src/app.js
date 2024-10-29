@@ -55,6 +55,6 @@ app.use(errorHandler);
 const server = http.createServer(app);
 
 server.listen(app.get('port'), () => {
-    console.log('App is running at http://0.0.0.0:%d in %s mode', app.get('port'), app.get('env'));
+    console.log('App is change running at http://0.0.0.0:%d in %s mode', app.get('port'), app.get('env'));
     console.log('Press CTRL-C to stop\n');
 });
