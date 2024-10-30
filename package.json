@@ -7,18 +7,18 @@
     "node": "16.14.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+ "test": "mocha ./src/test/app.test.js --exit",
     "babel": "babel ./src -d ./dist",
-    "dev": "nodemon --watch ./src --exec babel-node ./src/app.js", 
+    "dev": "nodemon --watch ./src --exec babel-node ./src/app.js",
     "remove-build": "node removeDist.js",
     "build": "mkdir dist && npm run babel && npm run copy-config",
     "copy-config": "node copyDbConfig.js",
     "start": "node ./dist/app.js"
   },
   "dependencies": {
+    "@babel/cli": "^7.23.9",
     "aws-sdk": "^2.1567.0",
     "axios": "^1.6.7",
-    "@babel/cli": "^7.23.9",
     "bcrypt": "^5.1.1",
     "connect-timeout": "^1.9.0",
     "cors": "^2.8.5",
@@ -38,6 +38,10 @@
     "@babel/core": "^7.23.9",
     "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
+    "@babel/register": "^7.25.9",
+    "chai": "^5.1.2",
+    "esm": "^3.2.25",
+    "mocha": "^10.8.1",
     "nodemon": "^3.0.3"
   }
 }
