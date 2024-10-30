@@ -35,6 +35,9 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
+# Copy the entire project to the working directory, including test files
+COPY . .
+
 # Install dependencies (including dev dependencies for testing)
 RUN npm install
 
@@ -43,9 +46,6 @@ RUN npm test && echo "Tests ran successfully"
 
 # Remove dev dependencies to keep the final image smaller
 RUN npm prune --production
-
-# Copy the entire project to the working directory
-COPY . .
 
 # Build the application (if applicable)
 RUN npm run build
