@@ -33,9 +33,9 @@ require('dotenv').config({ path: '../../.env' });
 module.exports = {
   development: {
     username: 'admin',
-    password: 'Fbazhar123',
+    password: '19aas27ams#1A',
     database: 'student_hub',
-    host: 'database-1.cly6ssugetpt.us-west-2.rds.amazonaws.com',
+    host: 'database-1.cfsgysi6078g.eu-west-2.rds.amazonaws.com',
     dialect: 'mysql',
     port: 3306,
     logging: false,
