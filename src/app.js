@@ -31,7 +31,7 @@ app.use(haltOnTimedout);
 
 // Express configuration
 app.set('host', '0.0.0.0');
-app.set('port', 3000);  // Set to 3000 for AWS EC2 access
+app.set('port', 8080);  // Set to 3000 for AWS EC2 access
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
