@@ -31,7 +31,7 @@ app.use(haltOnTimedout);
 
 // Express configuration
 app.set('host', '0.0.0.0');
-app.set('port', 8080);  // Set to 3000 for AWS EC2 access
+app.set('port', 3000);  // Set to 3000 for AWS EC2 access
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
@@ -43,7 +43,7 @@ app.use("/api", routes);
 app.get("/", (req, res) => {
     return res.send(`
         <center>
-            <h1>Hello 👋 from AWS EC2</h1>
+            <h1>Hello 👋 from google cloud</h1>
         </center>
     `);
 });
